@@ -1,5 +1,5 @@
 [package]
-name = "raild3x/roam"
+name = "scytheric/roam"
 description = "Roam is a service initialization framework for Roblox."
 authors = ["Logan Hunt (Raildex)"]
 version = "0.1.3"

@@ -1,5 +1,5 @@
 [package]
-name = "raild3x/objectcache"
+name = "scytheric/objectcache"
 description = "A fork of Pyseph's ObjectCache module, with some additional features."
 authors = ["Logan Hunt (Raildex)"]
 version = "0.0.1"

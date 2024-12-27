@@ -31,7 +31,7 @@ REPO_NAME=$(echo "$REMOTE_URL" | sed -E 's#https://github.com/[^/]+/([^/]+)\.git
 # Print the repository owner and name
 echo "Repository Owner: $REPO_OWNER"
 echo "Repository Name: $REPO_NAME"
-DOCS_LINK="https://raild3x.github.io/$REPO_NAME"
+DOCS_LINK="https://scytheric.github.io/$REPO_NAME"
 echo "Docs Link: $DOCS_LINK"
 
 # Output README file
@@ -78,7 +78,7 @@ for PACKAGE_DIR in "$SRC_DIR"/*/ ; do
 
             if [ -z "$FORMATTED_NAME" ]; then
                 FORMATTED_NAME=$PACKAGE_NAME
-                FORMATTED_NAME=$(echo "$FORMATTED_NAME" | sed 's/raild3x\///g')
+                FORMATTED_NAME=$(echo "$FORMATTED_NAME" | sed 's/scytheric\///g')
                 echo "No formatted name provided for $FORMATTED_NAME. Using package name as formatted name."
             fi
 

@@ -1,5 +1,5 @@
 [package]
-name = "raild3x/netwire"
+name = "scytheric/netwire"
 description = "A networking library based off of sleitnicks comm library."
 authors = ["Logan Hunt (Raildex)"]
 version = "0.2.0"
@@ -18,4 +18,4 @@ Promise = "evaera/promise@^4.0.0"
 Janitor = "howmanysmall/janitor@^1.16.0"
 Signal = "lucasmzreal/fastsignal@^10.2.1"
 Symbol = "sleitnick/symbol@^2.0.1"
-Comm = "sleitnick/comm@1.0.1" #"raild3x/comm@^0"
+Comm = "sleitnick/comm@1.0.1" #"scytheric/comm@^0"

@@ -1,5 +1,5 @@
 [package]
-name = "raild3x/comm"
+name = "scytheric/comm"
 description = "A fork of Sleitnick's Comm library for Roblox."
 authors = ["Logan Hunt (Raildex)"]
 version = "0.0.1"

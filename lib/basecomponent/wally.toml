@@ -1,5 +1,5 @@
 [package]
-name = "raild3x/basecomponent"
+name = "scytheric/basecomponent"
 description = "A fork of Sleitnick's Component class for Roblox."
 authors = ["Logan Hunt (Raildex)"]
 version = "0.1.0"
@@ -16,6 +16,6 @@ docsLink = "BaseComponent"
 [dependencies]
 Signal = "lucasmzreal/fastsignal@^10.2.1"
 Janitor = "howmanysmall/janitor@^1.16.0"
-RailUtil = "raild3x/railutil@^1"
+RailUtil = "scytheric/railutil@^1"
 Symbol = "sleitnick/symbol@^2.0.1"
 Fusion = "elttob/fusion@0.3.0"
