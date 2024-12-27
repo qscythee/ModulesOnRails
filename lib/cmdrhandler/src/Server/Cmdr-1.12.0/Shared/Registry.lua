@@ -89,7 +89,7 @@ Registry.RegisterHooksIn = Registry.RegisterTypesIn
 -- Prefer using Registry:RegisterCommand for proper handling of server/client model.
 function Registry:RegisterCommandObject (commandObject, fromCmdr)
 	commandObject.ServerRun = nil
-	
+
 	for key in pairs(commandObject) do
 		if self.CommandMethods[key] == nil then
 			error("Unknown key/method in command " .. (commandObject.Name or "unknown command") .. ": " .. key)

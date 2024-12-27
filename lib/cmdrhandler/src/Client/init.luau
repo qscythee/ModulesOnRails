@@ -49,6 +49,19 @@ function CmdrClient:PromiseCmdr(): Promise
 end
 
 --[=[
+	Returns a promise that resolves with the Cmdr Util module.
+	https://eryn.io/Cmdr/api/Util.html
+	return Promise<Util>
+]=]
+function CmdrClient:PromiseUtil()
+	return Promise.new(function(resolve)
+		cmdrProm:andThen(function(cmdr)
+			resolve(cmdr:WaitForChild("Shared"):WaitForChild("Util"))
+		end)
+	end)
+end
+
+--[=[
 	Checks if a player has permission to run a command
 	@param commandName -- The name of the command to check
 ]=]
@@ -66,7 +79,7 @@ function CmdrClient:HasPermission(commandName: string): boolean
 	if table.find(permissions, commandData.Group) or table.find(permissions, "Creator") then
 		return true
 	end
-	
+
 	return false
 end
 

@@ -55,6 +55,8 @@ CmdrServer.Client = {
 	ExecuteCommand = NetWire.createEvent(),
 }
 
+CmdrServer.Util = Util
+
 --[=[
 	Promise that resolves to the Cmdr module data
 	@return Promise<Cmdr>
@@ -106,15 +108,15 @@ function CmdrServer:RegisterCommandFromModule(module: ModuleScript)
 		self._definitionData[commandId] = commandData
 		self._executeData[commandId] = commandData.ServerRun or function() end
 		commandData.ServerRun = nil
-	
+
 		local commandServerScript = Templates.CmdrExecutionTemplate:Clone()
 		commandServerScript.Name = ("%sServer"):format(commandId)
-	
+
 		local cmdrServiceTarget = Instance.new("ObjectValue")
 		cmdrServiceTarget.Name = "CmdrServerTarget"
 		cmdrServiceTarget.Value = script
 		cmdrServiceTarget.Parent = commandServerScript
-	
+
 		local cmdrCommandId = Instance.new("StringValue")
 		cmdrCommandId.Name = "CmdrCommandId"
 		cmdrCommandId.Value = commandId
@@ -170,7 +172,7 @@ function CmdrServer:HasPermission(plr: Player, commandName: string): boolean
 	if table.find(permissions, commandData.Group) or table.find(permissions, "Creator") then
 		return true
 	end
-	
+
 	return false
 end
 
@@ -315,10 +317,23 @@ end
 	Registers a type with Cmdr
 	@param name -- The name of the type
 	@param typeData -- The type data to register
+
+	DO NOT USE.
+	@deprecated
 ]=]
 function CmdrServer:RegisterType<T>(name: string, typeData: TypeDefinition<T>): Promise
-    return self:PromiseCmdr():andThen(function(cmdr)
+	return self:PromiseCmdr():andThen(function(cmdr)
 		cmdr.Registry:RegisterType(name, typeData)
+	end)
+end
+
+--[=[
+	Registers all types in a container with Cmdr
+	@param container Instance -- The container to register types in
+]=]
+function CmdrServer:RegisterTypesIn(container: Instance): Promise
+	 return self:PromiseCmdr():andThen(function(cmdr)
+		return cmdr.Registry:RegisterTypesIn(container)
 	end)
 end
 
