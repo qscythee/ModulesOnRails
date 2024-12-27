@@ -1,8 +1,8 @@
 [package]
-name = "raild3x/cmdrhandler"
+name = "scytheric/cmdrhandler"
 description = "A wrapper for eveara/quenty's Cmdr library."
 authors = ["Logan Hunt (Raildex)"]
-version = "0.1.0"
+version = "0.1.1"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
