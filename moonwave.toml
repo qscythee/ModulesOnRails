@@ -1,7 +1,7 @@
 gitSourceBranch = "main"
 
 [docusaurus]
-url = "https://scytheric.github.io"
+url = "https://raild3x.github.io"
 baseUrl = "/ModulesOnRails"
 
 

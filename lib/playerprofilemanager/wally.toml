@@ -1,5 +1,5 @@
 [package]
-name = "scytheric/playerprofilemanager"
+name = "raild3x/playerprofilemanager"
 description = "A class for managing player profiles."
 authors = ["Logan Hunt (Raildex)"]
 version = "0.0.4"
@@ -16,8 +16,8 @@ docsLink = "PlayerProfileManager"
 [dependencies]
 Signal = "lucasmzreal/fastsignal@^10.2.1"
 Promise = "evaera/promise@^4.0.0"
-BaseObject = "scytheric/baseobject@^0"
-RailUtil = "scytheric/railutil@^1"
+BaseObject = "raild3x/baseobject@^0"
+RailUtil = "raild3x/railutil@^1"
 T = "osyrisrblx/t@3.1.1"
 
 [server-dependencies]

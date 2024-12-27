@@ -45,10 +45,10 @@
 	-- Accessing a potential Service
 	Roam.getService("MyService"):DoSomething() -- It is preffered to use standard requires instead of getService in order to get proper linting.
 	```
-
+	
 	:::tip Networking
-	Roam does not inherently have networking functionality. However, it can easily be added through the use of NetWire's
-	**[.setupServiceNetworking](https://scytheric.github.io/ModulesOnRails/api/ServerNetWire#setupServiceNetworking)** funtion.
+	Roam does not inherently have networking functionality. However, it can easily be added through the use of NetWire's 
+	**[.setupServiceNetworking](https://raild3x.github.io/ModulesOnRails/api/ServerNetWire#setupServiceNetworking)** funtion.
 	:::
 ]=]
 
@@ -221,7 +221,7 @@ Roam.Bootstrappers = { -- Generic Bootstrappers for Roam / Orion
 	local Roam = require(ReplicatedStorage.Roam)
 
 	local MyService = Roam.createService { Name = "MyService" }
-
+	
 	function MyService:DoSomething()
 		print("yeee haw!")
 	end
@@ -387,7 +387,7 @@ function Roam.requireModules(
 			SearchInstance(obj:GetChildren())
 		end
 	end
-
+	
 	assert(typeof(parents) == "table", "Parents must be an Instance or table of Instances")
 	for _, parent in ipairs(parents) do
 		SearchInstance(parent:GetChildren())

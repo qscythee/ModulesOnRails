@@ -1,5 +1,5 @@
 [package]
-name = "scytheric/probabilitydistributor"
+name = "raild3x/probabilitydistributor"
 description = "A class for distributing probability."
 authors = ["Logan Hunt (Raildex)"]
 version = "1.0.6"

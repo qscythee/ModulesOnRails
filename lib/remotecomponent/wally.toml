@@ -1,5 +1,5 @@
 [package]
-name = "scytheric/remotecomponent"
+name = "raild3x/remotecomponent"
 description = "A component extension to provide easy networking functionality."
 authors = ["Logan Hunt (Raildex)"]
 version = "0.1.0"
@@ -17,5 +17,5 @@ docsLink = "RemoteComponent"
 Comm = "sleitnick/comm@^1.0.1"
 Symbol = "sleitnick/symbol@^2.0.1"
 Promise = "evaera/promise@^4.0.0"
-RailUtil = "scytheric/railutil@^1"
-NetWire = "scytheric/netwire@^0.2"
+RailUtil = "raild3x/railutil@^1"
+NetWire = "raild3x/netwire@^0.2"
